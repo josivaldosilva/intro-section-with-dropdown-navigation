@@ -213,6 +213,7 @@ body.l-wrapper
 
 
 /* Main content styling*/
+
 .l-main 
 {
   /*  background-color: royalblue;*/
@@ -238,7 +239,6 @@ body.l-wrapper
     line-height: 1.5;
     font-style: 500;
 }
-
 
 .l-main > .l-content button
 {
@@ -294,10 +294,6 @@ body.l-wrapper
 { 
     color: hsl(228, 45%, 44%);
 }
-
-
-
-
 
 
 @media (min-width: 48rem)
