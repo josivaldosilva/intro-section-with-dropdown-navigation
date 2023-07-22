@@ -64,7 +64,7 @@ body.l-wrapper
         "logo menu-desktop menu-desktop menu-mobile"
     ;
   /* background-color: skyblue;*/
-    padding: 3rem 2.5rem;
+    padding: 3rem 2rem;
     grid-area: header;
 }
 
@@ -246,7 +246,7 @@ body.l-wrapper
     background-color: var(--AlmostBlack);
     border-radius: 1.5rem;
     padding: 1.5rem 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 }
 
 .l-main > .l-content button a
