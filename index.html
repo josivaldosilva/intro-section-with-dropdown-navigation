@@ -1,40 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <title>Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <title>Intro section with dropdown navigation</title>
 </head>
-<body>
+<body class="l-wrapper">
+   
+    <header class="l-header">
+        <section class="c-logo">
+            <a href="index.html" target="_self">
+              <img src="assets/images/logo.svg" alt="logo">
+            </a>
+        </section>
+      
+        <nav class="c-desktop-nav">
+    
+            <ul class="c-menu-list">
+                <li class="c-father">
+                    <div>
+                        <span>Features</span> 
+                        
+                        <div class="f-father-arrow" >
+                            <img src="assets/images/icon-arrow-down.svg"  alt="arrow" class="desktop-f-arrow">
+                        </div> 
+                    </div>
+                    <ul class="f-dropdown-list f-desk">
+                        <li class="f-dropped-item"><a href="#"><div><img src="assets/images/icon-todo.svg" alt="icon-todo"></div> <span>Todo List</span></a></li>
+                        <li class="f-dropped-item"><a href="#"><div><img src="assets/images/icon-calendar.svg" alt="icon-calendar"> </div><span>Calendar</span></a></li>
+                        <li class="f-dropped-item"><a href="#"><div><img src="assets/images/icon-reminders.svg" alt="icon-reminders"></div> <span>Reminders</span></a></li>
+                        <li class="f-dropped-item"><a href="#"><div><img src="assets/images/icon-planning.svg" alt="icon-planning"></div> <span>Planning</span></a></li>
+                    </ul>
+                </li>
+                <li class="c-father">
+                    <div>
+                        <span>Company</span> 
+                        
+                        <div class="s-father-arrow">
+                            <img src="assets/images/icon-arrow-down.svg" class="desktop-s-arrow" alt="arrow">
+                        </div> 
+                    </div>
+                     
+                    <ul class="s-dropdown-list s-desk ">
+                        <li class="s-dropped-item"><a href="#">History</a></li>
+                        <li class="s-dropped-item"><a href="#">Our Team</a></li>
+                        <li class="s-dropped-item"><a href="#">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="c-father"><a href="#">Carrers</a></li>
+                <li class="c-father"><a href="#">About</a></li>
+            </ul>
+    
+        </nav>
+      
+      
+          <!-- #region Mobile menu -->
+        <section class="c-mobile-menu">
 
-  Features
-  Company
-  Careers
-  About
+            <div class="c-backdrop"><!-- #backdrop--></div>
+        
+            <div class="c-right-header">
+                <div class="l-icon-menu">
+                    <img src="assets/images/icon-menu.svg" class="c-icon-menu" alt="icon menu">
+                </div>
+                
+                <div class="d login-area">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+        
+            <nav class="c-mobile-nav">
+                <div class="c-close-menu">
+                    <img src="assets/images/icon-close-menu.svg" class="c-icon-menu"  alt="c-icon-menu">
+                </div>
+        
+                <ul class="c-menu-list">
+                    <li class="c-father">
+                        <div>
+                            <span>Features</span> 
 
-  Login
-  Register
+                            <div class="f-father-arrow">
+                                <img src="assets/images/icon-arrow-down.svg"  alt="arrow" class="mobile-f-arrow">
+                            </div> 
+                        </div>
 
-  Make remote work
+                        <ul class="f-dropdown-list f-mob">
+                            <li class="f-dropped-item">
+                                <a href="#">
+                                    <div>
+                                        <img src="assets/images/icon-todo.svg" alt="icon-todo">
+                                    </div> 
+                                    <span>Todo List</span>
+                                </a>
+                            </li>
+                            <li class="f-dropped-item">
+                                <a href="#">
+                                    <div>
+                                        <img src="assets/images/icon-calendar.svg" alt="icon-calendar"> 
+                                    </div>
+                                    <span>Calendar</span>
+                                </a>
+                            </li>
+                            <li class="f-dropped-item">
+                                <a href="#">
+                                    <div>
+                                        <img src="assets/images/icon-reminders.svg" alt="icon-reminders">
+                                </div> <span>Reminders</span>
+                                </a>
+                            </li>
+                            <li class="f-dropped-item">
+                                <a href="#">
+                                    <div>
+                                        <img src="assets/images/icon-planning.svg" alt="icon-planning">
+                                    </div> 
+                                    <span>Planning</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+                    <li class="c-father">
+                        <div>
+                            <span>Company</span> 
+                            
+                            <div class="s-father-arrow">
+                                <img src="assets/images/icon-arrow-down.svg" class="mobile-s-arrow" alt="arrow">
+                            </div> 
+                        </div>
+                        
+                        <ul class="s-dropdown-list s-mob">
+                            <li class="s-dropped-item"><a href="#">History</a></li>
+                            <li class="s-dropped-item"><a href="#">Our Team</a></li>
+                            <li class="s-dropped-item"><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/josivaldosilva">Josivaldo Silva</a>.
-  </div>
-  <script src="assets/js/functions.js"></script>
+                    <li class="c-father"><a href="#">Carrers</a></li>
+                    <li class="c-father"><a href="#">About</a></li>
+                </ul>
+                
+                <div class="m login-area">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </nav>
+    
+        </section>
+    </header>
+
+    <section class="l-image-container">
+       <picture>
+            <source media="(min-width: 48rem)" srcset="assets/images/image-hero-desktop.png" type="image/png"> 
+            <img src="assets/images/image-hero-mobile.png" alt="image-hero-mobile" id="img-hero">
+        </picture>
+    </section>
+
+    <main class="l-main">
+            <article class="l-content">
+                <h1>Make remote work</h1> 
+                <p>
+                Get your team in sync, no matter your location. Streamline processes, 
+                create team rituals, and watch productivity soar.
+                </p>
+        
+                <button class="c-learnMore"><a href="#" target="_blank">Learn more</a></button>
+            </article>
+                  
+            <section class="l-clients">
+                <div class="c-client"><img src="assets/images/client-databiz.svg" alt="client-databiz"></div>
+                <div class="c-client"><img src="assets/images/client-audiophile.svg" alt="client-audiophile"></div>
+                <div class="c-client"><img src="assets/images/client-meet.svg" alt="client-meet"></div>
+                <div class="c-client"><img src="assets/images/client-maker.svg" alt="client-maker"></div>
+            </section>  
+    </main>
+
+    <footer class="attribuition l-footer">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/josivaldosilva">Josivaldo Silva</a>.
+    </footer>
+
+    <script src="assets/js/functions.js"></script>
 </body>
 </html>
