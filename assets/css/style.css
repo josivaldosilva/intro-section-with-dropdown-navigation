@@ -44,7 +44,7 @@ body.l-wrapper
 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 130px repeat(2, minmax(130px, 700px)) auto;
+    grid-template-rows: 130px;
     grid-template-areas:
         "header"
         "img"
@@ -238,7 +238,7 @@ body.l-wrapper
 {
     color: var(--MediumGray);
     font-size: 1.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     line-height: 1.5;
     font-style: 500;
 }
@@ -246,7 +246,7 @@ body.l-wrapper
 .l-main > .l-content button
 {
     border: none;  
-    margin-bottom: 6rem;  
+    margin-bottom: 9rem;  
 }
 
 .l-main > .l-content button a
@@ -318,44 +318,22 @@ body.l-wrapper
         padding-bottom: 0;
     }
 
-    .l-header .c-logo img
-    {
-        width: 13rem;
-    }
-
-    .l-image-container {
-       margin-left: 7rem;
-    }
-
     .l-main 
     {
-        padding: 15rem 6rem 0 0;
+        padding: auto 1rem 0 0;
         text-align: inherit;
+        margin-right: 4rem;
     }
 
     .l-main > .l-content h1 
     {
-        font-size: 8rem;
+        font-size: 5rem;
         margin-bottom: 6rem;
-    }
-
-    .l-main > .l-content p
-    {
-        font-size: 2rem;
-        margin-bottom: 6rem;
-        padding-right: 3rem;
     }
 
     .l-main > .l-content button
     {
        margin-bottom: 10rem;
-    }
-
-    .l-main > .l-content button a:hover
-    {
-        color: var(--AlmostBlack);
-        background-color: var(--AlmostWhite);
-        outline: 1px solid var(--AlmostBlack);
     }
 
     .l-main > .l-content button a
@@ -367,6 +345,7 @@ body.l-wrapper
 
 @media (min-width: 992px)
 {
+    
     .d.login-area
     {
         display: flex;
@@ -386,6 +365,18 @@ body.l-wrapper
         border: 2px solid var(--MediumGray);
         padding: 1.3rem 3rem;
         border-radius: 1.7rem;
+    }
+
+    .l-main 
+    {
+        padding-top: 15rem;
+    }
+    
+    .l-main > .l-content p
+    {
+        font-size: 2rem;
+        margin-bottom: 6rem;
+        padding-right: 3rem;
     }
 
     .l-icon-menu
@@ -448,6 +439,57 @@ body.l-wrapper
     body {
         margin: 0 auto;
         width: 150rem;
+    }
+
+    .l-header
+    {
+        padding-top: 1.7rem;
+        padding-bottom: 0;
+    }
+
+    .l-header .c-logo img
+    {
+        width: 13rem;
+    }
+
+    .l-image-container {
+       margin-left: 7rem;
+    }
+
+    .l-main 
+    {
+        padding: auto 6rem 0 0;
+        text-align: inherit;
+    }
+
+    .l-main > .l-content h1 
+    {
+        font-size: 8rem;
+        margin-bottom: 6rem;
+    }
+
+    .l-main > .l-content p
+    {
+        font-size: 2rem;
+        margin-bottom: 6rem;
+        padding-right: 3rem;
+    }
+
+    .l-main > .l-content button
+    {
+       margin-bottom: 10rem;
+    }
+
+    .l-main > .l-content button a:hover
+    {
+        color: var(--AlmostBlack);
+        background-color: var(--AlmostWhite);
+        outline: 1px solid var(--AlmostBlack);
+    }
+
+    .l-main > .l-content button a
+    {
+        font-size: 2rem;
     }
 
 }

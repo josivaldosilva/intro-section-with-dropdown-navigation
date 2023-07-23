@@ -11,8 +11,6 @@ const desktopFirFather = document.querySelector('.f-father')
 const desktopSecFather = document.querySelector('.s-father') 
 const desktopSecDroppedList = document.querySelector('.s-desk')
 const desktopFirDroppedList = document.querySelector('.f-desk')
-const desktopFirArrow = document.querySelector('.desktop-f-arrow') 
-const desktopSecArrow = document.querySelector('.desktop-s-arrow') 
 
 
 menuIcons.forEach(icon => {
@@ -29,29 +27,25 @@ menuIcons.forEach(icon => {
 // Mobile dropdown menu
 
 mobileFirArrow.addEventListener('click', e => {
-    e.target.classList.toggle('called')
-    const isCalled = mobileFirArrow.getAttribute('class')
-
-   if(isCalled == 'mobile-f-arrow called'){
-    mobileFirArrow.src = 'assets/images/icon-arrow-up.svg'
-    mobileFirDroppedList.classList.add('drop')
+    
+    mobileFirDroppedList.classList.toggle('drop')
+    
+   if(mobileFirDroppedList.getAttribute('class') == 'f-dropdown-list f-mob drop'){
+        mobileFirArrow.src = 'assets/images/icon-arrow-up.svg'
    }else {
-    mobileFirArrow.src = 'assets/images/icon-arrow-down.svg'
-    mobileFirDroppedList.classList.remove('drop')
+        mobileFirArrow.src = 'assets/images/icon-arrow-down.svg'
    }
 })
 
 
 mobileSecArrow.addEventListener('click', e => {
-    e.target.classList.toggle('called')
-    const isCalled = mobileSecArrow.getAttribute('class')
+    
+    mobileSecDroppedList.classList.toggle('drop')
 
-   if(isCalled == 'mobile-s-arrow called'){
-    mobileSecArrow.src = 'assets/images/icon-arrow-up.svg'
-    mobileSecDroppedList.classList.add('drop')
+   if(mobileSecDroppedList.getAttribute('class') == 's-dropdown-list s-mob drop'){
+        mobileSecArrow.src = 'assets/images/icon-arrow-up.svg'   
    }else {
-    mobileSecArrow.src = 'assets/images/icon-arrow-down.svg'
-    mobileSecDroppedList.classList.remove('drop')
+        mobileSecArrow.src = 'assets/images/icon-arrow-down.svg'
    }
 })
 
@@ -59,21 +53,23 @@ mobileSecArrow.addEventListener('click', e => {
 //Desktop Dropdown menu
 
 function firstDrop(){
-    desktopFirArrow.src = 'assets/images/icon-arrow-up.svg'
-    desktopFirDroppedList.classList.add('drop')
+    
+    desktopFirDroppedList.classList.toggle('drop')
+    if(desktopFirDroppedList.getAttribute('class') == 'f-dropdown-list f-desk drop'){
+        desktopFirArrow.src = 'assets/images/icon-arrow-up.svg'
+    }else {
+        desktopFirArrow.src = 'assets/images/icon-arrow-down.svg'
+    }
 }
 
-function firstDropOff(){
-    desktopFirDroppedList.classList.remove('drop')
-    desktopFirArrow.src = 'assets/images/icon-arrow-down.svg'
-}
 
 function secondDrop(){
-    desktopSecArrow.src = 'assets/images/icon-arrow-up.svg'
-    desktopSecDroppedList.classList.add('drop')
+   
+    desktopSecDroppedList.classList.toggle('drop')
+    if(desktopSecDroppedList.getAttribute('class') == 's-dropdown-list s-desk drop'){
+        desktopSecArrow.src = 'assets/images/icon-arrow-up.svg'
+    }else {
+        desktopSecArrow.src = 'assets/images/icon-arrow-down.svg'
+    }
 }
 
-function secondDropOff(){
-    desktopSecArrow.src = 'assets/images/icon-arrow-down.svg'
-    desktopSecDroppedList.classList.remove('drop')
-}
