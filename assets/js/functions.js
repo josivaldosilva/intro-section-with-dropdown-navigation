@@ -7,10 +7,12 @@ const mobileSecArrow = document.querySelector('.mobile-s-arrow')
 const mobileSecDroppedList = document.querySelector('.s-mob')
 const mobileFirDroppedList = document.querySelector('.f-mob')
 
-const desktopFirArrow = document.querySelector('.mobile-f-arrow') 
-const desktopSecArrow = document.querySelector('.mobile-s-arrow') 
-const desktopSecDroppedList = document.querySelector('.s-mob')
-const desktopFirDroppedList = document.querySelector('.f-mob')
+const desktopFirFather = document.querySelector('.f-father') 
+const desktopSecFather = document.querySelector('.s-father') 
+const desktopSecDroppedList = document.querySelector('.s-desk')
+const desktopFirDroppedList = document.querySelector('.f-desk')
+const desktopFirArrow = document.querySelector('.desktop-f-arrow') 
+const desktopSecArrow = document.querySelector('.desktop-s-arrow') 
 
 
 menuIcons.forEach(icon => {
@@ -24,7 +26,7 @@ menuIcons.forEach(icon => {
     })
 })
 
-// Mobile drodown menu
+// Mobile dropdown menu
 
 mobileFirArrow.addEventListener('click', e => {
     e.target.classList.toggle('called')
@@ -52,3 +54,26 @@ mobileSecArrow.addEventListener('click', e => {
     mobileSecDroppedList.classList.remove('drop')
    }
 })
+
+
+//Desktop Dropdown menu
+
+function firstDrop(){
+    desktopFirArrow.src = 'assets/images/icon-arrow-up.svg'
+    desktopFirDroppedList.classList.add('drop')
+}
+
+function firstDropOff(){
+    desktopFirDroppedList.classList.remove('drop')
+    desktopFirArrow.src = 'assets/images/icon-arrow-down.svg'
+}
+
+function secondDrop(){
+    desktopSecArrow.src = 'assets/images/icon-arrow-up.svg'
+    desktopSecDroppedList.classList.add('drop')
+}
+
+function secondDropOff(){
+    desktopSecArrow.src = 'assets/images/icon-arrow-down.svg'
+    desktopSecDroppedList.classList.remove('drop')
+}

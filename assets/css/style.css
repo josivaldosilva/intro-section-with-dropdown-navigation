@@ -75,6 +75,12 @@ body.l-wrapper
     grid-area: logo;
 }
 
+.l-header .c-logo img
+{
+    width: 7rem;
+}
+
+
 .l-header .c-desktop-nav 
 {
     display: none;
@@ -302,7 +308,7 @@ body.l-wrapper
     {
         display: grid;
         grid-template-columns: 1fr 2fr 2fr 1fr;
-
+        grid-template-rows: 280px repeat(2, minmax(80px, auto)) auto;
         grid-template-areas:
             "   header header  header  header  "
             "   .      img     img     .       "
@@ -310,9 +316,21 @@ body.l-wrapper
             "   footer footer  footer  footer  "
         ;
     }
+
+    .l-header
+    {
+        padding-top: 1.7rem;
+        padding-bottom: 0;
+    }
+
+    .l-header .c-logo img
+{
+    width: 13rem;
 }
 
-@media (min-width: 56.25rem)
+}
+
+@media (min-width: 992px)
 {
     .d.login-area
     {
@@ -321,6 +339,13 @@ body.l-wrapper
         gap: 3rem;
     }
 
+    .l-header .c-logo
+    {
+        grid-area: logo;
+        padding-top: 1.1rem;
+    }
+
+  
     .d.login-area a:nth-child(2)
     {
         border: 2px solid var(--MediumGray);
@@ -331,6 +356,62 @@ body.l-wrapper
     .l-icon-menu
     {
         display: none;
+    }
+
+    .l-header .c-desktop-nav 
+    {
+        display: block;
+        grid-area: menu-desktop;
+        padding-top: 1.5rem;
+    }
+
+    .l-header .c-desktop-nav > .c-menu-list
+    {
+       flex-direction: row;
+       gap: 5rem;
+       font-weight: 700;
+    }
+
+    .c-father:hover,
+    .c-father a:hover,
+    .d.login-area a:hover
+    {
+        color: var(--AlmostBlack );
+        cursor: pointer;
+        border-color: var(--AlmostBlack);
+    }
+    
+    .f-desk.drop,
+    .s-desk.drop
+    {
+        display: block;
+        padding: 1rem 2.5rem;
+        background-color: var(--AlmostWhite);
+        border-radius: 1.2rem;
+        margin-top: 2rem;
+        box-shadow: 1px 1px 5px var(--MediumGray);
+        font-weight: 500;
+    }
+
+    .f-desk
+    {
+        margin-left: -8rem;
+    }
+
+    .f-dropped-item,
+    .s-dropped-item
+    {
+        margin: 2rem 0 ;
+    }
+
+}
+
+
+@media (min-width: 1440px)
+{
+    body {
+        margin: 0 auto;
+        width: 150rem;
     }
 
 }
