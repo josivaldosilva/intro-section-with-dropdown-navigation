@@ -48,7 +48,7 @@ mobileSecArrow.addEventListener('click', e => {
 
    if(isCalled == 'mobile-s-arrow called'){
     mobileSecArrow.src = 'assets/images/icon-arrow-up.svg'
-   mobileSecDroppedList.classList.add('drop')
+    mobileSecDroppedList.classList.add('drop')
    }else {
     mobileSecArrow.src = 'assets/images/icon-arrow-down.svg'
     mobileSecDroppedList.classList.remove('drop')

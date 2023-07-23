@@ -44,7 +44,7 @@ body.l-wrapper
 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:repeat(3, minmax(80px, auto)) auto;
+    grid-template-rows: 130px repeat(2, minmax(130px, 700px)) auto;
     grid-template-areas:
         "header"
         "img"
@@ -207,7 +207,6 @@ body.l-wrapper
 /* Image container section styling*/
 
 .l-image-container {
-   /* background-color: darkkhaki;*/
     grid-area: img;
 }
 
@@ -222,9 +221,7 @@ body.l-wrapper
 
 .l-main 
 {
-  /*  background-color: royalblue;*/
     grid-area: main;
-   
     padding: 5rem 1.5rem 0 1.5rem;
     text-align: center;
 }
@@ -248,15 +245,15 @@ body.l-wrapper
 
 .l-main > .l-content button
 {
-    border: none;
-    background-color: var(--AlmostBlack);
-    border-radius: 1.5rem;
-    padding: 1.5rem 3rem;
-    margin-bottom: 6rem;
+    border: none;  
+    margin-bottom: 6rem;  
 }
 
 .l-main > .l-content button a
 {
+    background-color: var(--AlmostBlack);
+    border-radius: 1.5rem;
+    padding: 1.5rem 3rem;
     color: var(--AlmostWhite);
     font-size: 1.7rem;
     font-weight: 700;
@@ -307,12 +304,10 @@ body.l-wrapper
     body.l-wrapper 
     {
         display: grid;
-        grid-template-columns: 1fr 2fr 2fr 1fr;
-        grid-template-rows: 280px repeat(2, minmax(80px, auto)) auto;
+        grid-template-columns: 1fr 4fr 4fr 1fr;
         grid-template-areas:
             "   header header  header  header  "
-            "   .      img     img     .       "
-            "   .      main    main    .       "
+            "   .      main   img    .       "
             "   footer footer  footer  footer  "
         ;
     }
@@ -324,9 +319,49 @@ body.l-wrapper
     }
 
     .l-header .c-logo img
-{
-    width: 13rem;
-}
+    {
+        width: 13rem;
+    }
+
+    .l-image-container {
+       margin-left: 7rem;
+    }
+
+    .l-main 
+    {
+        padding: 15rem 6rem 0 0;
+        text-align: inherit;
+    }
+
+    .l-main > .l-content h1 
+    {
+        font-size: 8rem;
+        margin-bottom: 6rem;
+    }
+
+    .l-main > .l-content p
+    {
+        font-size: 2rem;
+        margin-bottom: 6rem;
+        padding-right: 3rem;
+    }
+
+    .l-main > .l-content button
+    {
+       margin-bottom: 10rem;
+    }
+
+    .l-main > .l-content button a:hover
+    {
+        color: var(--AlmostBlack);
+        background-color: var(--AlmostWhite);
+        outline: 1px solid var(--AlmostBlack);
+    }
+
+    .l-main > .l-content button a
+    {
+        font-size: 2rem;
+    }
 
 }
 
@@ -391,6 +426,7 @@ body.l-wrapper
         margin-top: 2rem;
         box-shadow: 1px 1px 5px var(--MediumGray);
         font-weight: 500;
+        position: absolute;
     }
 
     .f-desk
